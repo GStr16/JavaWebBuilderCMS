@@ -3,7 +3,6 @@ package loginSystem;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Dialog;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -65,7 +64,7 @@ public class Controller {
     @FXML
     public void loginScene(ActionEvent env) {
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("login.fxml"));
             rootPanelRegister.getChildren().setAll(pane);
         }
         catch(Exception e) {
@@ -78,14 +77,13 @@ public class Controller {
         String sql = "INSERT INTO root(USERNAME, EMAIL, PASSWORD) values (?,?,?)";
         try {
 
-
-
             if(!passField.equals("") && !usernameField.equals("") && !emailField.equals(""))
-                System.out.println("Please try again");
-            else
                 isOkay = true;
+            else
+                System.out.println("Pleasw try again");
 
-            if (isOkay == true) {
+
+            if (isOkay = true) {
                 Class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
                 System.out.println("Working!");
