@@ -16,6 +16,7 @@ import java.sql.ResultSet;
 
 public class Controller {
 
+    boolean isOkay = false;
     // Login form
     @FXML
     private TextField userField;
@@ -73,22 +74,34 @@ public class Controller {
     }
 
     public void Register(ActionEvent env) {
+        isOkay = false;
         String sql = "INSERT INTO root(USERNAME, EMAIL, PASSWORD) values (?,?,?)";
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");            System.out.println("Working!");
-            System.out.println("Working!");
-            pst = con.prepareStatement(sql);
 
-            pst.setString(1,usernameField.getText());
-            pst.setString(2,emailField.getText());
-            pst.setString(3,passField.getText());
 
-            System.out.println("Working");
 
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Succesfull!");
+            if(!passField.equals("") && !usernameField.equals("") && !emailField.equals(""))
+                System.out.println("Please try again");
+            else
+                isOkay = true;
 
+            if (isOkay == true) {
+                Class.forName("com.mysql.jdbc.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
+                System.out.println("Working!");
+                System.out.println("Working!");
+                pst = con.prepareStatement(sql);
+
+                pst.setString(1, usernameField.getText());
+                pst.setString(2, emailField.getText());
+                pst.setString(3, passField.getText());
+
+                System.out.println("Working");
+
+                pst.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Succesfull!");
+
+            }
         }
         catch(Exception e) {
             JOptionPane.showMessageDialog(null,"Error" + e.getMessage());
