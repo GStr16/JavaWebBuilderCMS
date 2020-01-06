@@ -1,3 +1,6 @@
+
+package loginSystemBackup04012020.loginSystem;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -6,7 +9,7 @@ public class Mail{
     private Pattern pattern;
     private Matcher matcher;
 
-    private static final String EMAIL_PATTERN = 
+    private static final String EMAIL_PATTERN =
         "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 

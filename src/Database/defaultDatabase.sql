@@ -12,6 +12,7 @@ Decription:
 sare
 sare@sare.com
 sare
+<<<<<<< HEAD
 WorkingjcZM5x5O5MePFTfL9x3fCg==
 
 
@@ -26,3 +27,9 @@ Working
 
 w+K9KWR4BAaJ/gNTi8rWlg==
 test
+=======
+Working
+
+test
+0LEBfdJKjTjPL1p7fxUmMw==
+>>>>>>> 95e0fe3c3d81c4ecf3fa22fe5d996bb6fdb9f762
