@@ -41,15 +41,17 @@ public class Controller {
     @FXML
     private AnchorPane rootPanelRegister;
 
-    static Connection con = null;
+
     static PreparedStatement pst = null;
     public void hello(ActionEvent env) {
-
-        String sql = "SELECT * FROM root where (EMAIL=? and PASSWORD=?)";
-
-
         try {
 
+
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = null;
+            conn = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
+
+            String sql = "SELECT * FROM root where (EMAIL=? and PASSWORD=?)";
             String pass = aes.encrypt(passField.getText(), secretKey);
             String email = aes.encrypt(emailField.getText(), secretKey);
             String user = aes.encrypt(usernameField.getText(), secretKey);
@@ -58,10 +60,8 @@ public class Controller {
             System.out.println(email);
             System.out.println(user);
 
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
 
-            pst = con.prepareStatement(sql);
+            pst = conn.prepareStatement(sql);
 
             pst.setString(1, email);
             pst.setString(2, pass);
@@ -111,7 +111,8 @@ public class Controller {
 
             if (isOkay == true) {
                 Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "yU9MuiRW");
+                Connection con = null;
+                con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
 
                 pst = con.prepareStatement(sql);
 
@@ -138,7 +139,7 @@ public class Controller {
             }
         }
         catch(Exception e) {
-            JOptionPane.showMessageDialog(null,"Error" + e.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 

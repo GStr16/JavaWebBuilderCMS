@@ -7,13 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9c87444-2b1b-4906-830e-8ba74afae465" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/JavaWebBuiderCMS.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/JavaWebBuiderCMS.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/META-INF/JavaWebBuiderCMS.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/loginSystem/Mail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/defaultDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/defaultDatabase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loginSystem/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loginSystem/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loginSystemBackup04012020/loginSystem/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loginSystemBackup04012020/loginSystem/Controller.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,10 +20,16 @@
   </component>
   <component name="ProjectId" id="1VzasUahwbyoXokdLBjJQ2Yu0OZ" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/loginSystemBackup04012020" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/loginSystemBackup04012020" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -43,13 +43,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AES">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="AES (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="loginSystemBackup04012020.loginSystem.AES" />
+      <module name="JavaWebBuiderCMS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="loginSystemBackup04012020.loginSystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AES" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="loginSystem.AES" />
       <module name="JavaWebBuiderCMS" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="loginSystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="loginSystemBackup04012020.loginSystem.Main" />
+      <module name="JavaWebBuiderCMS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="loginSystemBackup04012020.loginSystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,8 +98,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AES" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.AES (1)" />
+        <item itemvalue="Application.AES" />
       </list>
     </recent_temporary>
   </component>
