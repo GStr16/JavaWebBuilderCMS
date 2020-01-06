@@ -1,4 +1,4 @@
-package loginSystem;
+package loginSystemBackup04012020.loginSystem;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,8 +9,9 @@ import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
 import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class Controller {
@@ -44,7 +45,7 @@ public class Controller {
     static PreparedStatement pst = null;
     public void hello(ActionEvent env) {
 
-        String sql = "SELECT * FROM root where (USERNAME=? and PASSWORD=?) OR (EMAIL=? and PASSWORD=?)";
+        String sql = "SELECT * FROM root where (EMAIL=? and PASSWORD=?)";
 
 
         try {
@@ -61,10 +62,10 @@ public class Controller {
             con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
 
             pst = con.prepareStatement(sql);
-            pst.setString(1,user);
-            pst.setString(2,pass);
-            pst.setString(3, email);
-            pst.setString(4, pass);
+
+            pst.setString(1, email);
+            pst.setString(2, pass);
+
             ResultSet rs = pst.executeQuery();
             if(rs.next()) {
                 System.out.println("Working account");
@@ -98,7 +99,7 @@ public class Controller {
     public void Register(ActionEvent env) {
 
         isOkay = false;
-        String sql = "INSERT INTO root(USERNAME, EMAIL, PASSWORD) values (?,?,?)";
+        String sql = "INSERT INTO root(EMAIL, PASSWORD) values (?,?)";
         try {
 
             if( passField.getText().equals("") && usernameField.getText().equals("") && emailField.getText().equals(""))
@@ -110,25 +111,24 @@ public class Controller {
 
             if (isOkay == true) {
                 Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
-                System.out.println("Working!");
-                System.out.println("Working!");
+                con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "yU9MuiRW");
+
                 pst = con.prepareStatement(sql);
 
-                pst.setString(1, aes.encrypt(usernameField.getText(), secretKey));
-                pst.setString(2, aes.encrypt(emailField.getText(), secretKey) );
-                pst.setString(3, aes.encrypt(passField.getText(), secretKey) );
 
-                System.out.println(aes.encrypt(usernameField.getText(), secretKey));
+                pst.setString(1, aes.encrypt(emailField.getText(), secretKey) );
+                pst.setString(2, aes.encrypt(passField.getText(), secretKey) );
+
+
                 System.out.println(aes.encrypt(emailField.getText(), secretKey) );
                 System.out.println((aes.encrypt(passField.getText(), secretKey) ));
                 System.out.println("Decription:");
                 String pass = aes.encrypt(passField.getText(), secretKey);
                 String email = aes.encrypt(emailField.getText(), secretKey);
-                String user = aes.encrypt(usernameField.getText(), secretKey);
+
                 System.out.println(aes.decrypt(pass, secretKey));
                 System.out.println(aes.decrypt(email, secretKey));
-                System.out.println(aes.decrypt(user, secretKey));
+
 
                 System.out.println("Working");
 
