@@ -66,7 +66,7 @@ public class AES {
     }
     public static void main(String[] args)
     {
-        final String secretKey = "IvanSUgePula";
+        final String secretKey = "JavaWebBuilderCMS";
         Scanner sc = new Scanner(System.in);
         String mesaj = sc.nextLine();
         String originalString = "JavaWebBuilderCMS";

@@ -44,35 +44,39 @@ public class Controller {
     static PreparedStatement pst = null;
     public void hello(ActionEvent env) {
 
-        String sql = "SELECT * FROM root where (USERNAME=? and PASSWORD=?) OR (EMAIL=? and PASSWORD=?)";
-
-
         try {
-
-            String pass = aes.encrypt(passField.getText(), secretKey);
-            String email = aes.encrypt(emailField.getText(), secretKey);
-            String user = aes.encrypt(usernameField.getText(), secretKey);
-
-            System.out.println(aes.decrypt(pass, secretKey));
-            System.out.println(aes.decrypt(email, secretKey));
-            System.out.println(aes.decrypt(user, secretKey));
+            String sql = "SELECT * FROM root where (EMAIL=? and PASSWORD=?) or (USERNAME=? and PASSWORD=?)";
 
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");            System.out.println("Working!");
-            pst = con.prepareStatement(sql);
+            Connection conn = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
+
+            pst = conn.prepareStatement(sql);
+
+//            @FXML
+//            private TextField userField;
+//            @FXML
+//            private PasswordField passwordField;
+
+            String user = AES.encrypt(userField.getText(), secretKey);
+            String pass = AES.encrypt(passwordField.getText(), secretKey);
+
+            System.out.println(user + "" + pass);
+
             pst.setString(1,user);
             pst.setString(2,pass);
-            pst.setString(3, email);
-            pst.setString(4, pass);
+            pst.setString(3,user);
+            pst.setString(4,pass);
+
+
             ResultSet rs = pst.executeQuery();
             if(rs.next()) {
                 System.out.println("Working account");
             }
 
 
-            System.out.println(aes.decrypt(pass, secretKey));
-            System.out.println(aes.decrypt(email, secretKey));
-            System.out.println(aes.decrypt(user, secretKey));
+//            System.out.println(aes.decrypt(pass, secretKey));
+//            System.out.println(aes.decrypt(email, secretKey));
+//            System.out.println(aes.decrypt(user, secretKey));
         }
         catch (Exception ex) {
             System.out.println("Error " +ex.getMessage());
