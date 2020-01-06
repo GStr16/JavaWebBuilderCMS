@@ -104,7 +104,7 @@ public class Controller {
         String sql = "INSERT INTO root(USERNAME, EMAIL, PASSWORD) values (?,?,?)";
         try {
 
-            if( passField.getText().equals("") && usernameField.getText().equals("") && emailField.getText().equals(""))
+            if( passField.getText().equals("") && usernameField.getText().equals("") && emailField.getText().equals("") && checkerEmail.validate(emailField.getText().trim()))
                 System.out.println("Error "+isOkay);
             else {
                 isOkay = true;
