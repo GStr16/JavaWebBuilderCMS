@@ -1,9 +1,9 @@
 CREATE TABLE root_test (
 ID integer auto_increment primary key,
-email varchar(100) not null,
+email varchar(100) unique not null,
 username varchar(100) not null,
-number integer(6) not null,
-verified Boolean not null,
+number varchar(100) not null,
+verified varchar(100) not null,
 password varchar(100) not null
 )
 

@@ -15,13 +15,13 @@ import java.sql.ResultSet;
 
 public class Controller {
 
-    static Mail checkerEmail = new Mail();
+    static Mail mail = new Mail();
     static AES aes = new AES();
     static RandomNumberGenerator x = new RandomNumberGenerator();
-    int randNumber = x.randomGenerator();
+
     String secretKey = "JavaWebBuilderCMS";
     boolean isOkay = false;
-    int isVerified = 0;
+    boolean isVerified = false;
 
 
     // Login form
@@ -64,9 +64,7 @@ public class Controller {
             String user = AES.encrypt(userField.getText(), secretKey);
             String pass = AES.encrypt(passwordField.getText(), secretKey);
 
-
             System.out.println(user + "" + pass);
-
 
             System.out.println(pass);
 
@@ -115,61 +113,43 @@ public class Controller {
 
     public void Register(ActionEvent env) {
 
-        isOkay = false;
-        String sql = "INSERT INTO root_test(email, username, number, verified, password) values (?,?,?,?,?)";
         try {
-            String email = emailField.getText();
-
-            if( passField.getText().equals("") && emailField.getText().equals("") && checkerEmail.validate(email) )
-            {
-                System.out.println("Error "+isOkay);
-            }
-
-            else {
-                isOkay = true;
-                System.out.println(isOkay);
-            }
-
-            if (isOkay == true) {
-                Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
-
-                pst = con.prepareStatement(sql);
-
-//                @FXML
-//                private PasswordField passField;
-//                @FXML
-//                private TextField usernameField;
-//                @FXML
-//                private TextField emailField;
-
-                pst.setString(1, aes.encrypt(emailField.getText(), secretKey));
-                pst.setString(2, aes.encrypt(usernameField.getText(), secretKey) );
-                pst.setString(3, (Integer.toString(randNumber) ));
-                pst.setString(4, Integer.toString(0));
-                pst.setString(5, aes.encrypt(passField.getText(), secretKey) );
+            int randNumber = x.randomGenerator();
 
 
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
 
-                System.out.println(aes.encrypt(usernameField.getText(), secretKey));
-                System.out.println(aes.encrypt(emailField.getText(), secretKey) );
-                System.out.println((aes.encrypt(passField.getText(), secretKey) ));
-                System.out.println("Decription:");
-                String pass = aes.encrypt(passField.getText(), secretKey);
-                //String email = aes.encrypt(emailField.getText(), secretKey);
-                String user = aes.encrypt(usernameField.getText(), secretKey);
-                System.out.println(aes.decrypt(pass, secretKey));
-                System.out.println(aes.decrypt(email, secretKey));
-                System.out.println(aes.decrypt(user, secretKey));
+            isOkay = false;
+            String sql = "INSERT INTO root_test(email, username, number, verified, password) values (?,?,?,?,?)";
 
-                System.out.println("Working");
+                String email = emailField.getText();
 
-                pst.executeUpdate();
-//                JOptionPane.showMessageDialog(null, "Succesfull!");
-            }
+                if (passField.getText().equals("") && emailField.getText().equals("")) {
+
+                    System.out.println("Error " + isOkay);
+                } else {
+                    if (mail.isValid(email)) {
+                        isOkay = true;
+                        System.out.println(isOkay);
+                    }
+                }
+                if (isOkay == true)
+                {
+                    pst = con.prepareStatement(sql);
+                    pst.setString(1, aes.encrypt(emailField.getText(), secretKey));
+                    pst.setString(2, aes.encrypt(usernameField.getText(), secretKey));
+                    pst.setString(3, aes.encrypt(Integer.toString(randNumber), secretKey));
+                    pst.setString(4, aes.encrypt(Boolean.toString(isVerified), secretKey));
+                    pst.setString(5, aes.encrypt(passField.getText(), secretKey));
+
+                    System.out.println("Working");
+
+                    pst.executeUpdate();
+                }
         }
-        catch(Exception e) {
-            JOptionPane.showMessageDialog(null,"Error" + e.getMessage());
+        catch (Exception e) {
+            System.out.println("Your Email are existing!");
         }
     }
 }
