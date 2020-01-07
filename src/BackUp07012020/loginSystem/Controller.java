@@ -1,4 +1,4 @@
-package loginSystem;
+package BackUp07012020.loginSystem;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,20 +9,18 @@ import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
 import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class Controller {
 
-    static Mail checkerEmail = new Mail();
-    static AES aes = new AES();
-    static RandomNumberGenerator x = new RandomNumberGenerator();
-    int randNumber = x.randomGenerator();
+    Mail checkerEmail = new Mail();
+    AES aes = new AES();
+
     String secretKey = "JavaWebBuilderCMS";
     boolean isOkay = false;
-    int isVerified = 0;
-
 
     // Login form
     @FXML
@@ -116,15 +114,11 @@ public class Controller {
     public void Register(ActionEvent env) {
 
         isOkay = false;
-        String sql = "INSERT INTO root_test(email, username, number, verified, password) values (?,?,?,?,?)";
+        String sql = "INSERT INTO root(USERNAME, EMAIL, PASSWORD) values (?,?,?)";
         try {
-            String email = emailField.getText();
 
-            if( passField.getText().equals("") && emailField.getText().equals("") && checkerEmail.validate(email) )
-            {
+            if( passField.getText().equals("") && usernameField.getText().equals("") && emailField.getText().equals("") && checkerEmail.validate(emailField.getText().trim()))
                 System.out.println("Error "+isOkay);
-            }
-
             else {
                 isOkay = true;
                 System.out.println(isOkay);
@@ -133,30 +127,20 @@ public class Controller {
             if (isOkay == true) {
                 Class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
-
+                System.out.println("Working!");
+                System.out.println("Working!");
                 pst = con.prepareStatement(sql);
 
-//                @FXML
-//                private PasswordField passField;
-//                @FXML
-//                private TextField usernameField;
-//                @FXML
-//                private TextField emailField;
-
-                pst.setString(1, aes.encrypt(emailField.getText(), secretKey));
-                pst.setString(2, aes.encrypt(usernameField.getText(), secretKey) );
-                pst.setString(3, (Integer.toString(randNumber) ));
-                pst.setString(4, Integer.toString(0));
-                pst.setString(5, aes.encrypt(passField.getText(), secretKey) );
-
-
+                pst.setString(1, aes.encrypt(usernameField.getText(), secretKey));
+                pst.setString(2, aes.encrypt(emailField.getText(), secretKey) );
+                pst.setString(3, aes.encrypt(passField.getText(), secretKey) );
 
                 System.out.println(aes.encrypt(usernameField.getText(), secretKey));
                 System.out.println(aes.encrypt(emailField.getText(), secretKey) );
                 System.out.println((aes.encrypt(passField.getText(), secretKey) ));
                 System.out.println("Decription:");
                 String pass = aes.encrypt(passField.getText(), secretKey);
-                //String email = aes.encrypt(emailField.getText(), secretKey);
+                String email = aes.encrypt(emailField.getText(), secretKey);
                 String user = aes.encrypt(usernameField.getText(), secretKey);
                 System.out.println(aes.decrypt(pass, secretKey));
                 System.out.println(aes.decrypt(email, secretKey));
@@ -166,10 +150,14 @@ public class Controller {
 
                 pst.executeUpdate();
 //                JOptionPane.showMessageDialog(null, "Succesfull!");
+
             }
         }
         catch(Exception e) {
             JOptionPane.showMessageDialog(null,"Error" + e.getMessage());
         }
     }
+
+
+
 }
