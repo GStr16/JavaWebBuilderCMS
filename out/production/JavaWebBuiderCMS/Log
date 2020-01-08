@@ -1,0 +1,18 @@
+// login/register system
+
+AES ecryption and Email checker are working !
+Please don't change the password, I spend 2 days to seek this fix.
+
+
+Implement the algoritm to check user is verified or not with database!
+
+Tested the login and register system after uptades are done:
+    -do account and try to log in.
+
+Find the new password for database:
+    -that depend of me
+
+Implement the Thread in the login form for sending the new codes after 30 secounds !!!!!!
+
+The verification form is created;
+After finished to implement all the login system, I will provide the Modern GUI with CSS (OR SASS if it is working better with JavaFX)!!

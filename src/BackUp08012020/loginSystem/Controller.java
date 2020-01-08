@@ -1,4 +1,4 @@
-package loginSystem;
+package BackUp08012020.loginSystem;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,10 +7,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-import javax.swing.*;
 import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class Controller {
@@ -108,20 +108,6 @@ public class Controller {
         }
         catch(Exception e) {
             System.out.println("Error! " +e.getMessage());
-        }
-    }
-    @FXML
-    public void verification(ActionEvent evt) {
-        try {
-            String sql = "SELECT verified FROM ";
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
-
-
-
-        }
-        catch(Exception e) {
-            System.out.println("Error - " +e.getMessage());
         }
     }
 
