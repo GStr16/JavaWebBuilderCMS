@@ -1,4 +1,4 @@
-package loginSystem;
+package BackUp09012020.loginSystem;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,10 +7,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-import javax.swing.*;
 import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class Controller {
@@ -38,22 +38,17 @@ public class Controller {
     @FXML
     private TextField emailField;
 
-
-    @FXML
-    private TextField getVerification;
     @FXML
     private AnchorPane rootPanelLogin;
     @FXML
     private AnchorPane rootPanelRegister;
-    @FXML
-    private AnchorPane rootPanelVerification;
 
     static Connection con = null;
     static PreparedStatement pst = null;
     public void hello(ActionEvent env) {
 
         try {
-            String sql = "SELECT * FROM root_test where ((EMAIL=? and PASSWORD=?) or (USERNAME=? and PASSWORD=?)) AND verified = '6+4X1RFml6IirbixxXvn3w=='";
+            String sql = "SELECT * FROM root where (EMAIL=? and PASSWORD=?) or (USERNAME=? and PASSWORD=?)";
 
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
@@ -65,10 +60,11 @@ public class Controller {
 //            @FXML
 //            private PasswordField passwordField;
 
+
             String user = AES.encrypt(userField.getText(), secretKey);
             String pass = AES.encrypt(passwordField.getText(), secretKey);
 
-            System.out.println(user + " " + pass);
+            System.out.println(user + "" + pass);
 
             System.out.println(pass);
 
@@ -88,11 +84,9 @@ public class Controller {
             ResultSet rs = pst.executeQuery();
             if(rs.next()) {
                 System.out.println("Working account");
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("verifiedForm.fxml"));
-                rootPanelLogin.getChildren().setAll(pane);
-                String decryptedString = AES.decrypt(rs.getString("number"), secretKey) ;
-                System.out.println(decryptedString);
             }
+
+
 //            System.out.println(aes.decrypt(pass, secretKey));
 //            System.out.println(aes.decrypt(email, secretKey));
 //            System.out.println(aes.decrypt(user, secretKey));
@@ -116,13 +110,15 @@ public class Controller {
             System.out.println("Error! " +e.getMessage());
         }
     }
-
-
     @FXML
     public void verification(ActionEvent evt) {
         try {
-           System.out.print("Input from your text field "+ getVerification.getText() );
-//           con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
+            String sql = "SELECT verified FROM ";
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
+
+
+
         }
         catch(Exception e) {
             System.out.println("Error - " +e.getMessage());
@@ -167,7 +163,7 @@ public class Controller {
                 }
         }
         catch (Exception e) {
-            System.out.println("Your Email is existing!");
+            System.out.println("Your Email are existing!");
         }
     }
 }

@@ -1,5 +1,18 @@
 // login/register system
 
+Username: root ;
+Email: root@root.com ;
+password: root;
+
+if your email is existing you get this error: Your Email are existing!
+
+AES Encryption account:
+Username: SmSZOMATy6VBe8msUE6Wpg== ;
+Email: 729Qi0dHdvfT1p0FTo1NdQ== ;
+password: SmSZOMATy6VBe8msUE6Wpg==;
+
+
+
 AES ecryption and Email checker are working !
 Please don't change the password, I spend 2 days to seek this fix.
 
@@ -16,3 +29,4 @@ Implement the Thread in the login form for sending the new codes after 30 secoun
 
 The verification form is created;
 After finished to implement all the login system, I will provide the Modern GUI with CSS (OR SASS if it is working better with JavaFX)!!
+These database is been created to be tested login system
