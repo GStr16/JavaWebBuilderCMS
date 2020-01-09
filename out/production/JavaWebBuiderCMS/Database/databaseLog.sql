@@ -17,3 +17,10 @@ SELECT * FROM toot_test
 UPDATE root_test SET verified = 1 WHERE root_test.ID = 1;
 -- SELECTING the modified test values
 1 	test@gmailcom 	test 	961982 	1 	test
+
+-- Output AES Ecnryption
+email                       username                    number                      verified                    password
++8uWz3xd6clq6/QUjLTFsg== 	w+K9KWR4BAaJ/gNTi8rWlg== 	0l+HWv7fKFYzDvr4ss1QHg== 	6+4X1RFml6IirbixxXvn3w== 	w+K9KWR4BAaJ/gNTi8rWlg==
+
+6+4X1RFml6IirbixxXvn3w== -> false
+wdQgsjgiB7+0m5aJ1PO0gQ== -> true
