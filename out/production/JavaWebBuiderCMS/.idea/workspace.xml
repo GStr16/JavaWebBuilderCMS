@@ -122,12 +122,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java/jarDirectory/javax.mail-api-1.6.2.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/BackUp11012020" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/BackUp11012020" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -267,10 +272,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.AES" />
         <item itemvalue="Application.Mail" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.AES" />
       </list>
     </recent_temporary>
   </component>
@@ -328,22 +333,22 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="338" y="141" width="735" height="513" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1578737849025" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1578735089008">
+    <state width="1253" height="95" key="GridCell.Tab.0.bottom" timestamp="1578740505166">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1578735089008" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1578735089007">
+    <state width="1253" height="95" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1578740505166" />
+    <state width="1253" height="95" key="GridCell.Tab.0.center" timestamp="1578740505165">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1578735089007" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1578735089007">
+    <state width="1253" height="95" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1578740505165" />
+    <state width="1253" height="95" key="GridCell.Tab.0.left" timestamp="1578740505161">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1578735089007" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1578735089008">
+    <state width="1253" height="95" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1578740505161" />
+    <state width="1253" height="95" key="GridCell.Tab.0.right" timestamp="1578740505165">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1578735089008" />
+    <state width="1253" height="95" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1578740505165" />
     <state x="421" y="114" width="580" height="564" key="MultipleFileMergeDialog" timestamp="1578596357557">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -356,10 +361,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1578596326622" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1578720068017">
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1578779419627">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1578720068017" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1578779419627" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578426801813">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

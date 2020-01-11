@@ -75,7 +75,7 @@ public class Controller {
             if (rs.next())  {
                 if(rs.getString("verified").equals("wdQgsjgiB7+0m5aJ1PO0gQ==")) {
                     System.out.println("Working account");
-                    AnchorPane pane = FXMLLoader.load(getClass().getResource("MainForm.fxml"));
+                    AnchorPane pane = FXMLLoader.load(getClass().getResource("CMS.fxml"));
                     rootPanelLogin.getChildren().setAll(pane);
                 }
                 else if(rs.getString("verified").equals("6+4X1RFml6IirbixxXvn3w==")) {
@@ -109,32 +109,34 @@ public class Controller {
         }
     }
 
+
+
     @FXML
-    public void verification(ActionEvent evt) throws IOException{
+    public void verification(ActionEvent evt) {
        try {
-//            con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
-//            System.out.println("username "+username);
-//            isVerified = true;
-//            String verified = aes.encrypt(Boolean.toString(isVerified), secretKey);
-//            System.out.println(verified);
-//
-//            String code = getVerification.getText();
-//            System.out.println(code);
-//
-//            String codeValid = aes.encrypt(code, secretKey );
-//            System.out.println(codeValid);
-//
-//            String sql = "UPDATE root_test set verified='"+verified+"' WHERE email='"+username+"' AND number='"+codeValid+"'";
-//            System.out.println("Input from your text field "+ code);
-//            pst = con.prepareStatement(sql);
-//            pst.executeUpdate();
-//            con.close();
-           AnchorPane pane = FXMLLoader.load(getClass().getResource("MainForm.fxml"));
-           rootPanelMain.getChildren().setAll(pane);
+            con = DriverManager.getConnection("jdbc:mysql://hosting1993073.online.pro:3306/00286862_test", "00286862_test", "Y6ufde_e");
+            System.out.println("username "+username);
+            isVerified = true;
+            String verified = aes.encrypt(Boolean.toString(isVerified), secretKey);
+            System.out.println(verified);
+
+            String code = getVerification.getText();
+            System.out.println(code);
+
+            String codeValid = aes.encrypt(code, secretKey );
+            System.out.println(codeValid);
+
+            String sql = "UPDATE root_test set verified='"+verified+"' WHERE email='"+username+"' AND number='"+codeValid+"'";
+            System.out.println("Input from your text field "+ code);
+            pst = con.prepareStatement(sql);
+            pst.executeUpdate();
+            con.close();
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("CMS.fxml"));
+            rootPanelVerification.getChildren().setAll(pane);
        }
 
         catch(Exception e) {
-            System.out.println("Working");
+            System.out.println("Erorr - " +e.getMessage());
 
         }
     }

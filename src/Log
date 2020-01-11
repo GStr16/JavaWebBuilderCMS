@@ -30,3 +30,5 @@ Implement the Thread in the login form for sending the new codes after 30 secoun
 The verification form is created;
 After finished to implement all the login system, I will provide the Modern GUI with CSS (OR SASS if it is working better with JavaFX)!!
 These database is been created to be tested login system
+
+- create a email FORM and after all the login system is complete !
