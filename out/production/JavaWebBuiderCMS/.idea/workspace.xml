@@ -6,7 +6,24 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/activation_jaf1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_mail_api_1_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/loginSystem/MainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaWebBuiderCMS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWebBuiderCMS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/Database/databaseLog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/Database/databaseLog.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/loginSystem/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/loginSystem/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/loginSystem/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/loginSystem/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/loginSystem/verifiedForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/src/Database/databaseLog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/src/Database/databaseLog.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWebBuiderCMS/src/loginSystem/verifiedForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackUp07012020/loginSystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackUp07012020/loginSystem/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/databaseLog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/databaseLog.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loginSystem/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loginSystem/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loginSystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/loginSystem/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loginSystem/verifiedForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/loginSystem/VerifiedForm.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,14 +122,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/META-INF" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java/jarDirectory/javax.mail-api-1.6.2.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -249,9 +266,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Mail" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.AES" />
       </list>
@@ -295,6 +312,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="389" y="201" width="645" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741@67.27.1299.741" timestamp="1578161415113" />
+    <state x="524" y="115" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1578598524884">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="524" y="115" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1578598524884" />
     <state x="443" y="183" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1578214021409">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -303,37 +324,50 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="444" y="155" width="524" height="484" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/67.27.1299.741@67.27.1299.741" timestamp="1578175911055" />
-    <state x="338" y="141" width="735" height="513" key="FileChooserDialogImpl" timestamp="1578214015180">
+    <state x="338" y="141" width="735" height="513" key="FileChooserDialogImpl" timestamp="1578737849025">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="338" y="141" width="735" height="513" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1578214015180" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1578432008619">
+    <state x="338" y="141" width="735" height="513" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1578737849025" />
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1578735089008">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1578432008619" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1578432008618">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1578735089008" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1578735089007">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1578432008618" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1578432008618">
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1578735089007" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1578735089007">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1578432008618" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1578432008618">
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1578735089007" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1578735089008">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1578432008618" />
-    <state x="199" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1578214068797">
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1578735089008" />
+    <state x="421" y="114" width="580" height="564" key="MultipleFileMergeDialog" timestamp="1578596357557">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="199" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1578214068797" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1578434475962">
+    <state x="421" y="114" width="580" height="564" key="MultipleFileMergeDialog/67.27.1299.741@67.27.1299.741" timestamp="1578596357557" />
+    <state x="199" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1578737854962">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1578434475962" />
+    <state x="199" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1578737854962" />
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578596326622">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1578596326622" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1578720068017">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1578720068017" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578426801813">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1578426801813" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JavaWebBuiderCMS$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1578685155878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>BackUp07012020.loginSystem.*</FILTER>
+    </SUITE>
   </component>
 </project>
